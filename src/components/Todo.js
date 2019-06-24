@@ -9,8 +9,7 @@ class Todo extends Component {
             <div>
             <Header  title ='MY TODO TITLE'/>
             <h1>Welcome to my todo App </h1>
-            <ul>{
-            todoItems.map(items =>(<TodoItems individualItem ={items}/>
+            <ul>{todoItems.map(items =>(<TodoItems individualItem ={items}/>
             ))}
             </ul>
             </div>
