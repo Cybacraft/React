@@ -3,16 +3,34 @@ import Header from './Header'
 import TodoItems from './TodoItems'
 
 class Todo extends Component {
-    render(){
-        const todoItems = ['eat ' ,  'sleep ' ,  'train ' , 'fight ', 'rest']
+    state ={
+        todoItems: ['eat ' ,  'sleep ' ,  'train ' , 'fight ', 'rest','test'],
+        newItems: ''
+    }
+
+    handleChange =(e)=>{
+    this.setState ({newItems: e.target.value})
+    }
+
+    handleSubmit=(e)=>{
+     e.preventDefault()
+     this.setState ({todoItems: this.state.todoItems.concat(this.state.newItems)})
+    }
+
+        render(){
         return (
             <div>
             <Header  title ='MY TODO TITLE'/>
             <h1>Welcome to my todo App </h1>
-            <ul>{
-            todoItems.map(items =>(<TodoItems individualItem ={items}/>
-            ))}
+            <ul>{this.state.todoItems.map(items =>(<TodoItems individualItem ={items}/>))}
             </ul>
+            <form onSubmit = {this.handleSubmit}>
+            <input type ='text'
+            value={ this.state.newItems}
+            onChange ={this.handleChange}>
+            </input>
+            <button>submit</button>
+            </form>
             </div>
 
         )
