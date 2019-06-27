@@ -5,7 +5,7 @@ import TodoItems from './TodoItems'
 class Todo extends Component {
     state ={
         todoItems: ['eat ' ,  'sleep ' ,  'train ' , 'fight ', 'rest','test'],
-        newItems: ''
+        newItems:''
     }
 
     handleChange =(e)=>{
@@ -14,7 +14,8 @@ class Todo extends Component {
 
     handleSubmit=(e)=>{
      e.preventDefault()
-     this.setState ({todoItems: this.state.todoItems.concat(this.state.newItems)})
+     this.setState(
+         {todoItems: this.state.todoItems.concat(this.state.newItems)})
     }
 
         render(){
@@ -22,13 +23,13 @@ class Todo extends Component {
             <div>
             <Header  title ='MY TODO TITLE'/>
             <h1>Welcome to my todo App </h1>
-            <ul>{this.state.todoItems.map(items =>(<TodoItems individualItem ={items}/>))}
-            </ul>
+            {this.state.todoItems.map(items =>(<TodoItems individualItem ={items}/>))}
             <form onSubmit = {this.handleSubmit}>
+            <label>TodoItem</label><br></br>
             <input type ='text'
             value={ this.state.newItems}
             onChange ={this.handleChange}>
-            </input>
+            </input><br></br>
             <button>submit</button>
             </form>
             </div>
