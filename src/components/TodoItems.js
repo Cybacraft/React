@@ -1,9 +1,14 @@
 import React, {Component} from 'react'
 
 const TodoItems = (props) =>{
+   // destructuring props
+   const { individualItem, handleRemoveOneItem} = props
     return (
         <div>
-            {props.individualItem}
+            {individualItem}
+            <button onClick={ e => {
+            handleRemoveOneItem(individualItem)
+        }}>Remove</button> 
         </div>
     )
 }
