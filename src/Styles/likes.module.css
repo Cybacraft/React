@@ -1,0 +1,19 @@
+.wrapper{
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.buttonWrapper{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+ }   
+
+.button{
+    width: 15%;
+    height: 20%;
+    padding: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+    background: gray;
+}
