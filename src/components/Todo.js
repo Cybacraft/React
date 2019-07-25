@@ -73,7 +73,7 @@ class Todo extends Component {
     return (
       <div>
         <Header title="TODO APP" />
-        <h1 className={todoStyles.title}> GET GOING WITH TODO APP </h1>
+        <h1 className={todoStyles.title}> ACHIEVE MORE WITH TODO APP </h1>
 
         <div className={todoStyles.wrapper}>
         <div className={todoStyles.forms} >
@@ -92,7 +92,7 @@ class Todo extends Component {
         <div className={todoStyles.cover}>
           <button className={todoStyles.removeAllButton}
           style={{ display: todoItems.length == 0 ? "none" : "block" }}
-          onClick={this.RemoveAll} >Clear</button>
+          onClick={this.RemoveAll} >Clear All</button>
         {todoItems.map(items => (
           <TodoItems
             key={items}

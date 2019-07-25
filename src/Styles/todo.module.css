@@ -38,7 +38,7 @@ margin: 0 auto;
 
 .forms button{
     text-transform: uppercase;
-    background:black; 
+    background:royalblue; 
     width: 100%;
     border:0;
     padding: 15px;
@@ -77,4 +77,21 @@ align-self: flex-end;
     display: flex;
     flex-direction: column;
     /* float: left; */
+}
+
+
+
+@media only screen and (max-width: 568px){
+
+.wrapper{
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.removeAllButton{
+ width: 50%;
+ margin-left: auto;
+ padding: 1%;
+}
+
 }
