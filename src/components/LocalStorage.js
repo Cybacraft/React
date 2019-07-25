@@ -19,8 +19,8 @@ class LocalStorage extends Component{
         //Convert to real object.
         const personParse = JSON.parse(getPerson)
     return(
-     <div>
-         <Header title="LocalStorage" />
+     <div >
+         <Header  title="LOCAL STORAGE" />
          <h3>The Stringified Version is:</h3>
          <p>{getPerson}</p>
          <h4>The parse version is;</h4>

@@ -1,0 +1,34 @@
+.headerContainer{
+    background-color: black;
+    padding: 20px 0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.headerContainer h2{
+    color: white;
+    padding-left: 6px;
+}
+
+.headerContainer ul{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.headerContainer ul li{
+    list-style: none;
+    padding-right: 15px;
+}
+
+.headerContainer ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.headerContainer ul li a:hover{
+    color: gray;
+}
